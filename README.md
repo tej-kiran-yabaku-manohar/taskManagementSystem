@@ -55,7 +55,6 @@ task-manager/
 Clone the repository:
 ```shell
 git clone https://github.com/your-github-username/task-manager.git
-cd task-manager
 ```
 
 Build and run the application using Maven:
