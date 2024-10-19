@@ -50,3 +50,47 @@ task-manager/
 │       └── data.sql
 └── pom.xml
 ```
+
+## Running the Application
+Clone the repository:
+```shell
+git clone https://github.com/your-github-username/task-manager.git
+cd task-manager
+```
+
+Build and run the application using Maven:
+
+```shell
+mvn clean install
+mvn spring-boot:run
+```
+
+Access the application: The application will be running on http://localhost:8080.
+
+Access the H2 Console: The H2 database can be accessed from http://localhost:8080/h2-console. Use the following credentials:
+
+  JDBC URL: jdbc:h2:mem:taskdb
+  Username: miracletest
+  Password: tejkiran
+
+Testing the APIs: You can test the APIs using Postman or below cURL commands 
+  
+Create Tasks: curl -X POST http://localhost:8080/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"Complete unit tests", "description":"Write unit tests for task management", "dueDate":"2024-11-15"}'
+
+View All Tasks:	curl -X GET http://localhost:8080/tasks
+
+View Task 2:  curl -X GET http://localhost:8080/task/2
+
+
+Update Tasks: 	curl -X PUT http://localhost:8080/tasks/2\
+-H "Content-Type: application/json" \
+-d '{"title":"Testing is done", "dueDate":"2024-12-31"}'
+
+Delete Task 1: 	curl -X DELETE http://localhost:8080/tasks/1
+
+
+Mark Task 1 as Completed: 	curl -X PATCH http://localhost:8080/tasks/1/complete
+
+- **H2 In-Memory Database
