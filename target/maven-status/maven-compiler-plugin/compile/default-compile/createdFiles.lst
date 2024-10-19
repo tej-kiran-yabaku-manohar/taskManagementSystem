@@ -1,0 +1,5 @@
+com/miracleInterview/taskmanagement/repository/TaskRepository.class
+com/miracleInterview/taskmanagement/service/TaskService.class
+com/miracleInterview/taskmanagement/controller/TaskController.class
+com/miracleInterview/taskmanagement/TaskManagementApplication.class
+com/miracleInterview/taskmanagement/model/Task.class
